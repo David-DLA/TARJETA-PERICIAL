@@ -1,3 +1,20 @@
+Kimi:  
+Entendido, dos cosas:
+1.  Nombre en una sola línea: "Dr. David Lucas Alborch"
+2.  Problema al descargar: El navegador abre la página en lugar de descargar el archivo
+----
+Solución para descargar correctamente:
+En tu ordenador ASUS, cuando pulses el enlace de descarga:
+1.  Haz clic derecho sobre el enlace
+2.  Selecciona "Guardar enlace como..." o "Guardar destino como..."
+3.  Guarda como index.html en el escritorio
+O si ya se abrió como página web:
+1.  Pulsa Ctrl + S (Guardar página)
+2.  En "Tipo", selecciona "Página web, solo HTML"
+3.  Nombre: index.html
+4.  Guarda en el escritorio
+----
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -33,43 +50,52 @@
   a{color:inherit;text-decoration:none;}
   .wrap{max-width:var(--max); margin:0 auto; padding:0 28px;}
 
-  /* subtle paper texture via layered radial gradients, no external image */
   body{
     background-image:
       radial-gradient(rgba(27,50,69,0.025) 1px, transparent 1px);
     background-size: 3px 3px;
   }
 
-  /* ===== Header / monogram ===== */
   header{
-    padding:56px 0 40px;
+    padding:48px 0 32px;
     text-align:center;
     border-bottom:1px solid var(--hairline);
   }
   .monogram{
     display:flex;
     justify-content:center;
-    margin-bottom:14px;
+    margin-bottom:10px;
     user-select:none;
   }
   .monogram svg{ width:168px; height:auto; }
-  h1{
+  .name-line{
     font-family:'Cormorant Garamond', serif;
     font-weight:600;
-    font-size:30px;
-    margin:0 0 6px;
+    font-size:28px;
     color:var(--navy-deep);
     letter-spacing:0.2px;
+    margin:0;
+    line-height:1.2;
+  }
+  .name-line:last-of-type{
+    margin-bottom:8px;
+  }
+  .title-group{
+    margin:8px 0 0;
   }
   .title-line{
     font-family:'Inter', sans-serif;
-    font-size:12.5px;
+    font-size:12px;
     font-weight:500;
-    letter-spacing:0.6px;
+    letter-spacing:0.5px;
     text-transform:uppercase;
     color:var(--navy);
     opacity:0.85;
-    margin:0 0 4px;
+    margin:0 0 2px;
+    line-height:1.4;
+  }
+  .title-line:last-child{
+    margin-bottom:0;
   }
   .icomv{
     font-family:'Inter', sans-serif;
@@ -77,19 +103,19 @@
     letter-spacing:0.5px;
     color:var(--gold);
     text-transform:uppercase;
-    margin:10px 0 0;
+    margin:8px 0 0;
   }
   .motto{
-    margin-top:18px;
+    margin-top:16px;
     font-family:'Cormorant Garamond', serif;
     font-style:italic;
-    font-size:14px;
-    color:var(--navy);
-    opacity:0.6;
-    letter-spacing:0.5px;
+    font-weight:600;
+    font-size:18px;
+    color:var(--navy-deep);
+    opacity:0.9;
+    letter-spacing:1px;
   }
 
-  /* ===== Quick actions ===== */
   .actions{
     display:grid;
     grid-template-columns:repeat(2,1fr);
@@ -135,7 +161,6 @@
     transition:color 0.2s ease;
   }
 
-  /* ===== Section shell ===== */
   section{padding:44px 0;}
   section + section{border-top:1px solid var(--hairline);}
   .eyebrow{
@@ -148,7 +173,6 @@
     margin:0 0 18px;
   }
 
-  /* ===== Formación ===== */
   .formacion-list{
     list-style:none; margin:0; padding:0;
   }
@@ -169,7 +193,6 @@
     flex:0 0 auto;
   }
 
-  /* ===== Informes ===== */
   .informes-grid{
     display:grid;
     grid-template-columns:1fr;
@@ -207,7 +230,6 @@
     line-height:1.5;
   }
 
-  /* ===== Footer ===== */
   footer{
     padding:40px 0 60px;
     text-align:center;
@@ -223,12 +245,13 @@
     margin-top:16px;
     font-family:'Cormorant Garamond', serif;
     font-style:italic;
-    font-size:12.5px;
-    color:var(--ink);
-    opacity:0.45;
-    max-width:420px;
+    font-size:13px;
+    color:var(--navy-deep);
+    opacity:0.7;
+    max-width:480px;
     margin-left:auto;
     margin-right:auto;
+    letter-spacing:0.3px;
   }
 
   @media (min-width:560px){
@@ -248,15 +271,17 @@
         <circle cx="160" cy="130" r="118" fill="none" stroke="#A9824C" stroke-width="1" opacity="0.3"/>
         <line x1="30" y1="168" x2="290" y2="168" stroke="#A9824C" stroke-width="1.5"/>
         <text x="10" y="198" font-family="'Cormorant Garamond', Georgia, serif" font-weight="700" font-size="200" fill="#1B3245">D</text>
-        <text x="120" y="198" font-family="'Cormorant Garamond', Georgia, serif" font-weight="700" font-size="128" fill="#A9824C">L</text>
+        <text x="120" y="198" font-family="'Cormorant Garamond', Georgia, serif" font-weight="700" font-size="168" fill="#A9824C">L</text>
         <rect x="122" y="161.5" width="13" height="13" fill="#A9824C" transform="rotate(45 128.5 168)"/>
       </svg>
     </div>
-    <h1>Dr. Vicente David Lucas Alborch</h1>
-    <p class="title-line">Facultativo Especialista en Medicina del Trabajo</p>
-    <p class="title-line">Perito Médico · Actuación Imparcial (Art. 335 LEC)</p>
-    <p class="icomv">ICOMV Nº 46/4619105 · Servicio de Peritaciones</p>
-    <p class="motto">Primum non nocere</p>
+    <p class="name-line">Dr. David Lucas Alborch</p>
+    <div class="title-group">
+      <p class="title-line">Facultativo Especialista en Medicina del Trabajo</p>
+      <p class="title-line">Perito Médico</p>
+      <p class="icomv">ICOMV Nº 46/4619105 · Servicio de Peritaciones</p>
+    </div>
+    <p class="motto">"Primum non nocere"</p>
   </header>
 
   <div class="wrap">
@@ -317,14 +342,14 @@
           <span class="n">IV</span>
           <div>
             <h3>Grado de Discapacidad</h3>
-            <p>Valoración pericial conforme al RD 888/2022, su normativa de desarrollo y la normativa autonómica de la Comunitat Valenciana.</p>
+            <p>Valoración pericial conforme al RD 888/2022, su reglamento de desarrollo y la normativa propia de la Comunitat Valenciana.</p>
           </div>
         </article>
         <article class="informe-card">
           <span class="n">V</span>
           <div>
             <h3>Mala Praxis Médica</h3>
-            <p>Peritaciones de responsabilidad patrimonial, civil y penal por presunta negligencia médica.</p>
+            <p>Peritación integral de responsabilidades (patrimonial, civil y penal) en casos de presunta mala praxis médica.</p>
           </div>
         </article>
       </div>
@@ -336,7 +361,7 @@
       C/ Ausiàs March, Patio 2, Puerta 5 — 46470 Catarroja (Valencia)<br>
       678 52 99 46 · vd.lucas@comv.es
     </p>
-    <p class="disclaimer">Actuación médico-pericial independiente, sin perjuicio de la competencia de los organismos administrativos y judiciales correspondientes.</p>
+    <p class="disclaimer">Independencia pericial, dentro del marco competencial de la Administración y el Poder Judicial.</p>
   </footer>
 
 </body>
